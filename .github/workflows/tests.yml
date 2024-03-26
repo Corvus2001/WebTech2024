@@ -5,11 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Set up JDK 16
+      - name: Set up JDK 21
         uses: action/setup-java@v2
         with:
           distribution: "adopt"
-          java version: 16
+          java version: 21
       - name: clean build
         run: .\gradlew clean test --info --stacktrace
 
