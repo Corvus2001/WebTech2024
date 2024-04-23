@@ -6,15 +6,15 @@ public class Task{
     private int id;
     private String title;
     private String description;
-    private String status;
+    private boolean done;
     private Date dueDate;
 
     // Constructor
-    public Task(int id, String title, String description, String status, Date dueDate) {
+    public Task(int id, String title, String description, boolean done, Date dueDate) {
         this.id = id;
         this.title = title;
         this.description = description;
-        this.status = status;
+        this.done = done;
         this.dueDate = dueDate;
     }
 
@@ -46,12 +46,12 @@ public class Task{
     }
 
     // Getter and Setter for status
-    public String getStatus() {
-        return status;
+    public boolean getDone() {
+        return done;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setDone(boolean done) {
+        this.done = done;
     }
 
     // Getter and Setter for dueDate
@@ -64,8 +64,8 @@ public class Task{
     }
 
     // Method to update the status of the task
-    public void updateStatus(String newStatus) {
-        setStatus(newStatus);
+    public void updateDueDate(boolean newDone) {
+        setDone(newDone);
     }
 
     // Override toString method for easy printing of task details
@@ -75,7 +75,7 @@ public class Task{
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
-                ", status='" + status + '\'' +
+                ", status='" + done + '\'' +
                 ", dueDate=" + dueDate +
                 '}';
     }
