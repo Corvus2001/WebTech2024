@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Viewer</title>
+</head>
+<body>
+<h1>Tasks</h1>
+<ul id="tasksList"></ul>
+
+<script>
+  // Function to fetch tasks and update the DOM
+  function fetchTasks() {
+    fetch('http://localhost:8080/tasks')
+            .then(response => response.json())
+            .then(tasks => {
+              const tasksList = document.getElementById('tasksList');
+              tasksList.innerHTML = ''; // Clear current list
+              tasks.forEach(task => {
+                const li = document.createElement('li');
+                li.textContent = `ID: ${task.id}, Title: ${task.title}, Description: ${task.description}, Done: ${task.done}, Due Date: ${task.dueDate}`;
+                tasksList.appendChild(li);
+              });
+            })
+            .catch(error => console.error('Error fetching tasks:', error));
+  }
+
+  // Call fetchTasks on page load
+  document.addEventListener('DOMContentLoaded', fetchTasks);
+</script>
+</body>
+</html>
