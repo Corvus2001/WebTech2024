@@ -1,5 +1,24 @@
 {
   "dependencies": {
     "vue": "^3.4.26"
-  }
+  },
+  "name": "webtech2024",
+  "description": "[![CI](https://github.com/Corvus2001/WebTech2024/actions/workflows/tests.yml/badge.svg)](https://github.com/Corvus2001/WebTech2024/actions/workflows/tests.yml)\r # Readme\r http://localhost:8080/db-console/login.jsp?jsessionid=e1aafa81ac50cfecf510e4765d3aa0be",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "@babel/core": "^7.24.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.24.1",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "npm init"
+  },
+  "author": "berkay",
+  "license": "ISC"
 }
