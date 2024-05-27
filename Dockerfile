@@ -6,5 +6,5 @@ RUN ./gradlew build --no-daemon --stacktrace
 
 # Package stage
 FROM eclipse-temurin:21-jdk
-COPY --from=build /home/gradle/src/build/libs/thing-backend-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build /home/gradle/src/build/libs/WebTechProject-0.0.1-SNAPSHOT.jar app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
